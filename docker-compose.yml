@@ -5,7 +5,7 @@ secrets:
 
 services:
   traefik:
-    image: traefik:latest
+    image: docker.io/library/traefik:v3.1.7
     container_name: traefik
     restart: unless-stopped
     command:
@@ -30,7 +30,6 @@ services:
       - --entrypoints.websecure.http.tls.domains[0].sans=*.griend.dev
     secrets:
       - cf_dns_api_token
-    # expose the path to file provided by docker containing the value we want for ENDPOINT.
     environment:
       CF_DNS_API_TOKEN_FILE: /run/secrets/cf_dns_api_token
     ports:

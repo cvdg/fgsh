@@ -13,7 +13,7 @@ Custom Token -> {name}
   - Zone - Zone - Read
   - Zone - DNS  - Edit
 - Zone Resources:
-  - Include - Specific Zone - {DNS Zone}
+  - Include - All Zones
 - TTL:
   - Start Date - {today}
   - End Date - {today + 1 year}
